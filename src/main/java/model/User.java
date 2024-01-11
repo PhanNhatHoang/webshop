@@ -16,5 +16,13 @@ public class User {
 
 
     private String fullname;
+    private String Phone;
+    private String Address;
+    private String Email;
+    private String pass;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn( name = "role_ID",referencedColumnName = "role_ID")
+    private Role role;
 
 }
